@@ -61,6 +61,28 @@
   width: 100%;
 }
 
+.about__grant-notice {
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-2);
+}
+
+.about__grant-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--signal-600);
+  transition: color 0.2s ease;
+}
+
+.about__grant-link:hover {
+  color: var(--text);
+}
+
 @media (max-width: 900px) {
   .about__inner {
     grid-template-columns: 1fr;

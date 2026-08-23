@@ -1,4 +1,5 @@
 import { useReveal } from '../hooks/useReveal'
+import { GRANT_NOTICE } from '../company'
 
 export function About() {
   const { ref, visible } = useReveal<HTMLDivElement>()
@@ -35,6 +36,15 @@ export function About() {
                   className="about__logo-image"
                 />
               </div>
+              <p className="about__grant-notice">{GRANT_NOTICE}</p>
+              <a
+                href="https://fasie.ru"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="about__grant-link"
+              >
+                fasie.ru
+              </a>
             </div>
           </div>
         </div>

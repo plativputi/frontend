@@ -84,6 +84,12 @@
   max-width: 190px;
 }
 
+.footer__fasie-note {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-text-2);
+}
+
 .footer__fasie-link {
   font-family: var(--font-mono);
   font-size: 13px;
@@ -97,17 +103,45 @@
 
 .footer__bottom {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-  gap: 20px;
+  gap: 24px;
   flex-wrap: wrap;
   padding-top: 28px;
 }
 
 .footer__legal {
   display: flex;
-  align-items: baseline;
-  gap: 14px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__requisites {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-text-2);
+}
+
+.footer__requisites > div {
+  display: flex;
+  gap: 7px;
+}
+
+.footer__requisites dt {
+  color: #6c7787;
+}
+
+.footer__requisites dd {
+  font-variant-numeric: tabular-nums;
+}
+
+.footer__address {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--ink-text-2);
 }
 
 .footer__company {

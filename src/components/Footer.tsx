@@ -1,5 +1,6 @@
 import { useReveal } from '../hooks/useReveal'
 import { Logo } from './Logo'
+import { COMPANY, GRANT } from '../company'
 
 export function Footer() {
   const { ref, visible } = useReveal<HTMLDivElement>()
@@ -42,6 +43,9 @@ export function Footer() {
               <div className="footer__fasie-logo">
                 <img src={`${import.meta.env.BASE_URL}743.png`} alt="Фонд содействия инновациям" />
               </div>
+              <p className="footer__fasie-note">
+                Программа «{GRANT.programme}», {GRANT.wave}
+              </p>
               <a href="https://fasie.ru" target="_blank" rel="noopener noreferrer" className="footer__fasie-link">
                 fasie.ru
               </a>
@@ -51,11 +55,26 @@ export function Footer() {
 
         <div className="footer__bottom">
           <div className="footer__legal">
-            <p className="footer__company">ООО «Плати в пути»</p>
-            <p className="footer__city">Россия</p>
+            <p className="footer__company">{COMPANY.name}</p>
+            <dl className="footer__requisites">
+              <div>
+                <dt>ИНН</dt>
+                <dd>{COMPANY.inn}</dd>
+              </div>
+              <div>
+                <dt>ОГРН</dt>
+                <dd>{COMPANY.ogrn}</dd>
+              </div>
+              <div>
+                <dt>ОКПО</dt>
+                <dd>{COMPANY.okpo}</dd>
+              </div>
+            </dl>
+            <p className="footer__address">{COMPANY.address}</p>
+            <p className="footer__address">Генеральный директор — {COMPANY.director}</p>
           </div>
           <p className="footer__copyright">
-            © {new Date().getFullYear()} ООО «Плати в пути». Все права защищены.
+            © {new Date().getFullYear()} {COMPANY.name}. Все права защищены.
           </p>
         </div>
       </div>
