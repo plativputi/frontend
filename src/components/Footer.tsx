@@ -32,7 +32,7 @@ export function Footer() {
             <h4 className="footer__links-title">При поддержке</h4>
             <div className="footer__fasie">
               <div className="footer__fasie-logo">
-                <img src="/743.png" alt="Фонд содействия инновациям" />
+                <img src={`${import.meta.env.BASE_URL}743.png`} alt="Фонд содействия инновациям" />
               </div>
               <a href="https://fasie.ru" target="_blank" rel="noopener noreferrer" className="footer__fasie-link">
                 fasie.ru

@@ -16,7 +16,7 @@ export function Header() {
     <header className={`header ${scrolled ? 'header--scrolled' : ''} ${open ? 'header--open' : ''}`}>
       <div className="container header__inner">
         <a href="#top" className="header__logo" onClick={() => setOpen(false)}>
-          <img src="/plati-logo.svg" alt="Плати в пути" className="header__logo-img" />
+          <img src={`${import.meta.env.BASE_URL}plati-logo.svg`} alt="Плати в пути" className="header__logo-img" />
         </a>
 
         <nav className="header__nav">

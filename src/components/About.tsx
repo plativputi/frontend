@@ -30,7 +30,7 @@ export function About() {
             <div className="about__logo-body">
               <div className="about__fasie-logo">
                 <img
-                  src="/743.png"
+                  src={`${import.meta.env.BASE_URL}743.png`}
                   alt="Фонд содействия инновациям"
                   className="about__logo-image"
                 />
