@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - claude/repository-access-check-jv5kjn
   workflow_dispatch:
 
 permissions:
