@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+      # Окружение github-pages пускает деплой только с этой ветки: правило
+      # создалось, когда она была дефолтной. Пока правило не обновлено
+      # в Settings → Environments, публикует именно этот триггер.
+      - claude/repository-access-check-jv5kjn
   workflow_dispatch:
 
 permissions:
