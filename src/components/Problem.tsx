@@ -2,24 +2,47 @@ import { useReveal } from '../hooks/useReveal'
 
 const problems = [
   {
-    icon: '👥',
     title: 'Толпа в час пик',
     text: 'В часы пик пробираться через толпу к валидатору — стресс и потеря времени.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" width="22" height="22">
+        <circle cx="9" cy="8" r="3.2" stroke="currentColor" strokeWidth="1.8" />
+        <circle cx="17" cy="9.5" r="2.4" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M3 19c0-3 2.7-5 6-5s6 2 6 5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M16 14.4c2.9.2 5 2.1 5 4.6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    ),
   },
   {
-    icon: '💳',
     title: 'Передача карты',
     text: 'Передавать банковскую карту или телефон через несколько человек — риск потерять имущество.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" width="22" height="22">
+        <rect x="2.5" y="6" width="19" height="12" rx="2.5" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M2.5 10h19" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M6 14.5h3.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    ),
   },
   {
-    icon: '🎫',
     title: 'Наличные и билеты',
     text: 'Искать мелочь, покупать бумажный билет у водителя — неудобно и долго.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" width="22" height="22">
+        <path d="M3 7.5A1.5 1.5 0 0 1 4.5 6h15A1.5 1.5 0 0 1 21 7.5V10a2 2 0 0 0 0 4v2.5a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 16.5V14a2 2 0 0 0 0-4V7.5Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+        <path d="M13 8.5v7" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeDasharray="2 3" />
+      </svg>
+    ),
   },
   {
-    icon: '⏱️',
     title: 'Задержки рейсов',
     text: 'Оплата на входе задерживает посадку и увеличивает время стоянки транспорта.',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" width="22" height="22">
+        <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.8" />
+        <path d="M12 7v5.4l3.4 2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
   },
 ]
 

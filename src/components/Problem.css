@@ -1,70 +1,57 @@
 .problem {
-  background: var(--neutral-50);
-}
-
-.problem__head {
-  text-align: center;
-  margin-bottom: 56px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.problem__head .section-label {
-  justify-content: center;
-}
-
-.problem__head .section-subtitle {
-  text-align: center;
+  background: var(--paper);
 }
 
 .problem__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
 }
 
+/* Не карточки, а колонки под общей линейкой — как строки табло. */
 .problem__card {
-  background: #fff;
-  border-radius: var(--radius-lg);
-  padding: 32px 24px;
-  text-align: center;
-  border: 1px solid var(--neutral-200);
-  transition: all 0.3s ease;
+  padding-top: 22px;
+  border-top: 2px solid var(--ink);
+  transition: border-color 0.3s var(--ease);
 }
 
 .problem__card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
-  border-color: var(--primary-300);
+  border-top-color: var(--signal);
 }
 
 .problem__icon {
-  font-size: 36px;
+  color: var(--text-2);
   margin-bottom: 16px;
+  transition: color 0.3s var(--ease);
+}
+
+.problem__card:hover .problem__icon {
+  color: var(--signal-600);
 }
 
 .problem__card-title {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
-  color: var(--neutral-900);
-  margin-bottom: 10px;
+  letter-spacing: -0.015em;
+  margin-bottom: 8px;
 }
 
 .problem__card-text {
   font-size: 15px;
-  color: var(--neutral-500);
   line-height: 1.6;
+  color: var(--text-2);
 }
 
 @media (max-width: 900px) {
   .problem__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 560px) {
   .problem__grid {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 }

@@ -1,82 +1,65 @@
 .features {
-  background: var(--neutral-50);
-}
-
-.features__head {
-  text-align: center;
-  margin-bottom: 56px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.features__head .section-label {
-  justify-content: center;
-}
-
-.features__head .section-subtitle {
-  text-align: center;
+  background: var(--paper);
 }
 
 .features__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .features__card {
-  background: #fff;
-  border-radius: var(--radius-lg);
-  padding: 32px;
-  border: 1px solid var(--neutral-200);
-  transition: all 0.3s ease;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 30px 28px 32px;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
 }
 
 .features__card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
-  border-color: var(--primary-300);
+  transform: translateY(-5px);
+  border-color: var(--line-strong);
+  box-shadow: var(--sh-2);
 }
 
 .features__icon {
-  width: 52px;
-  height: 52px;
-  border-radius: var(--radius-md);
-  background: var(--primary-100);
-  color: var(--neutral-900);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  background: var(--signal-soft);
+  color: var(--signal-600);
   margin-bottom: 20px;
-  transition: all 0.3s ease;
+  transition: background 0.3s var(--ease), color 0.3s var(--ease);
 }
 
 .features__card:hover .features__icon {
-  background: var(--primary-500);
-  color: var(--neutral-900);
-  transform: scale(1.08);
+  background: var(--ink);
+  color: var(--signal);
 }
 
 .features__card-title {
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 700;
-  color: var(--neutral-900);
+  letter-spacing: -0.02em;
   margin-bottom: 10px;
 }
 
 .features__card-text {
   font-size: 15px;
-  color: var(--neutral-500);
-  line-height: 1.6;
+  line-height: 1.62;
+  color: var(--text-2);
 }
 
 @media (max-width: 900px) {
   .features__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 620px) {
   .features__grid {
     grid-template-columns: 1fr;
   }

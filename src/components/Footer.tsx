@@ -1,4 +1,5 @@
 import { useReveal } from '../hooks/useReveal'
+import { Logo } from './Logo'
 
 export function Footer() {
   const { ref, visible } = useReveal<HTMLDivElement>()
@@ -7,6 +8,13 @@ export function Footer() {
     <footer className="footer">
       <div className="container">
         <div ref={ref} className={`footer__inner ${visible ? 'visible' : ''}`}>
+          <div className="footer__brand">
+            <Logo tone="light" />
+            <p className="footer__tagline">
+              Оплата проезда по Bluetooth — без валидаторов, карт и очередей.
+            </p>
+          </div>
+
           <div className="footer__links">
             <h4 className="footer__links-title">Навигация</h4>
             <a href="#how">Как это работает</a>

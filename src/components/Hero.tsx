@@ -89,19 +89,25 @@ export function Hero() {
             </div>
           </div>
           <div className="hero__float-card hero__float-card--1">
-            <span className="hero__float-icon">🚌</span>
+            <span className="hero__float-icon">
+              <svg viewBox="0 0 24 24" fill="none" width="15" height="15">
+                <rect x="4" y="5" width="16" height="11" rx="3" fill="currentColor" />
+                <path d="M6 16v2M18 16v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                <rect x="6.5" y="7.5" width="5" height="4" rx="1" fill="#0b0e14" />
+                <rect x="12.5" y="7.5" width="5" height="4" rx="1" fill="#0b0e14" />
+              </svg>
+            </span>
             <span>Автобус определён</span>
           </div>
           <div className="hero__float-card hero__float-card--2">
-            <span className="hero__float-icon">✓</span>
+            <span className="hero__float-icon">
+              <svg viewBox="0 0 24 24" fill="none" width="15" height="15">
+                <path d="M5 13l4 4L19 7" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </span>
             <span>Оплата прошла</span>
           </div>
         </div>
-      </div>
-      <div className="hero__wave">
-        <svg viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none">
-          <path d="M0 80L60 75C120 70 240 60 360 55C480 50 600 50 720 55C840 60 960 70 1080 75C1200 80 1320 80 1380 80L1440 80V120H0V80Z" fill="var(--neutral-50)" />
-        </svg>
       </div>
     </section>
   )

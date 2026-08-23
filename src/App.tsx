@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
+import './components/Logo.css'
 import './components/Header.css'
 import './components/Hero.css'
 import './components/Problem.css'

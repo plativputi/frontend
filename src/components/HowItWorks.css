@@ -1,155 +1,177 @@
 .how {
-  background: #fff;
+  background: var(--surface);
 }
 
-.how__head {
-  text-align: center;
-  margin-bottom: 64px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.how__head .section-label {
-  justify-content: center;
-}
-
-.how__head .section-subtitle {
-  text-align: center;
-}
-
+/* Шаги — остановки на маршрутной линии. */
 .how__steps {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  margin-bottom: 72px;
-  position: relative;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 44px;
+  margin-bottom: 88px;
 }
 
 .how__step {
-  background: var(--neutral-50);
-  border-radius: var(--radius-lg);
-  padding: 32px 24px;
   position: relative;
-  border: 1px solid var(--neutral-200);
-  transition: all 0.3s ease;
+  padding-top: 48px;
 }
 
-.how__step:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
-  border-color: var(--primary-400);
-  background: #fff;
+.how__step::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--signal);
+  box-shadow: 0 0 0 5px var(--signal-soft);
+}
+
+/* Отрезок линии до следующей остановки */
+.how__step-arrow {
+  position: absolute;
+  top: 20px;
+  left: 26px;
+  right: -44px;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, var(--line-strong) 0 6px, transparent 6px 12px);
 }
 
 .how__step-num {
-  font-size: 14px;
-  font-weight: 800;
-  color: var(--primary-600);
-  letter-spacing: 0.05em;
-  margin-bottom: 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--text-3);
+  margin-bottom: 18px;
 }
 
 .how__step-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: var(--radius-md);
-  background: var(--neutral-900);
-  color: var(--primary-400);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--ink);
+  color: var(--signal);
+  margin-bottom: 18px;
 }
 
 .how__step-title {
   font-size: 18px;
   font-weight: 700;
-  color: var(--neutral-900);
-  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
 }
 
 .how__step-text {
   font-size: 15px;
-  color: var(--neutral-500);
   line-height: 1.6;
+  color: var(--text-2);
 }
 
-.how__step-arrow {
-  display: none;
-}
+/* ─── Режимы оплаты: тёмное табло ────────────────────────────────── */
 
 .how__modes {
-  background: var(--neutral-900);
-  border-radius: var(--radius-xl);
+  background: var(--ink);
+  border-radius: var(--r-lg);
   padding: 48px;
-  border: 1px solid var(--neutral-800);
-  color: var(--neutral-100);
+  position: relative;
+  overflow: hidden;
+}
+
+.how__modes::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(560px 300px at 12% 0%, rgba(255, 198, 41, 0.14), transparent 62%);
+  pointer-events: none;
 }
 
 .how__modes-title {
-  text-align: center;
-  font-size: 24px;
-  font-weight: 700;
+  position: relative;
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.6vw, 30px);
+  font-weight: 600;
+  letter-spacing: -0.035em;
   color: #fff;
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 }
 
 .how__modes-grid {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .how__mode {
-  background: var(--neutral-800);
-  border-radius: var(--radius-lg);
-  padding: 28px;
-  border: 1px solid var(--neutral-700);
-  transition: all 0.3s ease;
+  background: var(--ink-2);
+  border: 1px solid var(--ink-line);
+  border-radius: var(--r-md);
+  padding: 26px;
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease);
 }
 
 .how__mode:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.24);
 }
 
 .how__mode--accent {
-  border-color: var(--primary-500);
-  background: linear-gradient(180deg, rgba(251, 194, 31, 0.12), var(--neutral-800));
+  border-color: var(--signal);
+  box-shadow: inset 0 0 0 1px rgba(255, 198, 41, 0.35), 0 24px 48px -30px rgba(255, 198, 41, 0.8);
 }
 
 .how__mode-tag {
   display: inline-block;
-  padding: 4px 12px;
-  border-radius: 100px;
-  background: var(--primary-500);
-  color: var(--neutral-900);
-  font-size: 12px;
-  font-weight: 700;
-  margin-bottom: 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 5px 11px;
+  border-radius: var(--r-pill);
+  background: var(--signal);
+  color: var(--ink);
+  margin-bottom: 18px;
 }
 
 .how__mode-tag--future {
-  background: var(--warning);
+  background: transparent;
+  border: 1px solid var(--ink-line);
+  color: var(--ink-text-2);
 }
 
 .how__mode-name {
-  font-size: 20px;
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
   color: #fff;
   margin-bottom: 10px;
 }
 
 .how__mode-desc {
-  font-size: 15px;
-  color: var(--neutral-300);
-  line-height: 1.6;
+  font-size: 14.5px;
+  line-height: 1.62;
+  color: var(--ink-text-2);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   .how__steps {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 32px;
+    margin-bottom: 64px;
+  }
+
+  .how__step-arrow {
+    right: -32px;
+  }
+
+  .how__step:nth-child(2n) .how__step-arrow {
+    display: none;
   }
 
   .how__modes-grid {
@@ -161,8 +183,17 @@
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 560px) {
   .how__steps {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .how__step-arrow {
+    display: none;
+  }
+
+  .how__step {
+    padding-top: 40px;
   }
 }
