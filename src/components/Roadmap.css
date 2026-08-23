@@ -1,0 +1,128 @@
+.roadmap {
+  background: #fff;
+}
+
+.roadmap__head {
+  text-align: center;
+  margin-bottom: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.roadmap__head .section-label {
+  justify-content: center;
+}
+
+.roadmap__head .section-subtitle {
+  text-align: center;
+}
+
+.roadmap__timeline {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  padding-left: 40px;
+}
+
+.roadmap__line {
+  position: absolute;
+  left: 15px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--primary-500), var(--primary-300) 60%, var(--neutral-200));
+}
+
+.roadmap__item {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 36px;
+  position: relative;
+}
+
+.roadmap__item:last-child {
+  margin-bottom: 0;
+}
+
+.roadmap__dot {
+  position: absolute;
+  left: -40px;
+  top: 4px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.roadmap__dot--done {
+  background: var(--primary-500);
+  color: var(--neutral-900);
+  box-shadow: 0 0 0 4px rgba(251, 194, 31, 0.2);
+}
+
+.roadmap__dot--future {
+  background: #fff;
+  border: 2px solid var(--neutral-300);
+  box-shadow: 0 0 0 4px var(--neutral-100);
+}
+
+.roadmap__dot-inner {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--neutral-300);
+}
+
+.roadmap__content {
+  flex: 1;
+}
+
+.roadmap__phase {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--neutral-900);
+  background: var(--primary-100);
+  padding: 4px 12px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.roadmap__phase--future {
+  color: var(--neutral-400);
+}
+
+.roadmap__title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: 8px;
+}
+
+.roadmap__text {
+  font-size: 15px;
+  color: var(--neutral-500);
+  line-height: 1.6;
+}
+
+@media (max-width: 520px) {
+  .roadmap__timeline {
+    padding-left: 32px;
+  }
+
+  .roadmap__dot {
+    left: -32px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .roadmap__item {
+    gap: 16px;
+  }
+}
